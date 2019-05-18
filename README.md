@@ -32,12 +32,12 @@ constructor(
 ```javascript
 
 anyFunctionToEmit() {
-	// without data
-	this._globalEventsService.getEvent("anyEventWithAName").emit();
+  // without data
+  this._globalEventsService.getEvent("anyEventWithAName").emit();
     
-    // with data
-    const dataToEmit = "Hellow world!";
-    this._globalEventsService.getEvent("anyEventWithAName").emit(dataToEmit);
+  // with data
+  const dataToEmit = "Hellow world!";
+  this._globalEventsService.getEvent("anyEventWithAName").emit(dataToEmit);
 }
 
 ````
@@ -47,17 +47,17 @@ anyFunctionToEmit() {
 ```javascript
 
 anyFunctionToListen() {
-	// without data
-	this._globalEventsService.getEvent("anyEventWithAName").subscribe(() => {
-    	// code to do when listen something
-    });
+  // without data
+  this._globalEventsService.getEvent("anyEventWithAName").subscribe(() => {
+    // code to do when listen something
+  });
     
-    // with data
-    this._globalEventsService.getEvent("anyEventWithAName").subscribe((data) => {
-    	console.log(data); // "Hello world!";
+  // with data
+  this._globalEventsService.getEvent("anyEventWithAName").subscribe((data) => {
+      console.log(data); // "Hello world!";
         
-        // code to do when listen something
-    });
+      // code to do when listen something
+  });
 }
 
 ````

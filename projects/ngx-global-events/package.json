@@ -1,0 +1,16 @@
+{
+  "name": "ngx-global-events",
+  "version": "1.0.0",
+  "peerDependencies": {
+    "@angular/common": "^6.0.0-rc.0 || ^6.0.0",
+    "@angular/core": "^6.0.0-rc.0 || ^6.0.0"
+  },
+  "keywords": [
+    "angular",
+    "events",
+    "global-events",
+    "ngx-global-events"
+  ],
+  "author": "Belmiro Flávio <belmirofss@gmail.com>",
+  "license": "MIT"
+}

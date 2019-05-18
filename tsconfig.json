@@ -16,6 +16,14 @@
     "lib": [
       "es2017",
       "dom"
-    ]
+    ],
+    "paths": {
+      "ngx-global-events": [
+        "dist/ngx-global-events"
+      ],
+      "ngx-global-events/*": [
+        "dist/ngx-global-events/*"
+      ]
+    }
   }
 }

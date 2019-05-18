@@ -121,6 +121,41 @@
           }
         }
       }
+    },
+    "ngx-global-events": {
+      "root": "projects/ngx-global-events",
+      "sourceRoot": "projects/ngx-global-events/src",
+      "projectType": "library",
+      "prefix": "ngx-ge",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/ngx-global-events/tsconfig.lib.json",
+            "project": "projects/ngx-global-events/ng-package.json"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/ngx-global-events/src/test.ts",
+            "tsConfig": "projects/ngx-global-events/tsconfig.spec.json",
+            "karmaConfig": "projects/ngx-global-events/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/ngx-global-events/tsconfig.lib.json",
+              "projects/ngx-global-events/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
     }
   },
   "defaultProject": "global-events"

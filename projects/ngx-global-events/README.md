@@ -32,8 +32,8 @@ constructor(
 ```javascript
 
 anyFunctionToEmit() {
-	// without data
-	this._globalEventsService.getEvent("anyEventWithAName").emit();
+    // without data
+    this._globalEventsService.getEvent("anyEventWithAName").emit();
     
     // with data
     const dataToEmit = "Hellow world!";
@@ -47,9 +47,9 @@ anyFunctionToEmit() {
 ```javascript
 
 anyFunctionToListen() {
-	// without data
-	this._globalEventsService.getEvent("anyEventWithAName").subscribe(() => {
-    	// code to do when listen something
+    // without data
+    this._globalEventsService.getEvent("anyEventWithAName").subscribe(() => {
+        // code to do when listen something
     });
     
     // with data

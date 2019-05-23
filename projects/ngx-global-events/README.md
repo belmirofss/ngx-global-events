@@ -17,10 +17,10 @@ $ npm i ngx-global-events --save
 ##### To import:
 
 ```javascript
-
-import { NgxGlobalEventsService } from 'ngx-global-events/public_api';
-
 // component.ts
+
+import { NgxGlobalEventsService } from 'ngx-global-events';
+
 constructor(
     private _globalEventsService: NgxGlobalEventsService
 ) { }

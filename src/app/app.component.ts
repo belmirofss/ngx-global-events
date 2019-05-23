@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NgxGlobalEventsService } from 'ngx-global-events/public_api';
+import { NgxGlobalEventsService } from 'ngx-global-events';
 
 @Component({
   selector: 'app-root',

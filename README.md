@@ -1,11 +1,11 @@
 # NgxGlobalEvents
 
 
-######  A really simple way to emit and listen global events in Angular 6+.
+A really simple way to emit and listen global events in Angular 6+.
 
 ### Installation
 
-```javascript
+```
 
 $ npm i ngx-global-events --save
 
@@ -17,10 +17,10 @@ $ npm i ngx-global-events --save
 ##### To import:
 
 ```javascript
-
-import { NgxGlobalEventsService } from 'ngx-global-events/public_api';
-
 // component.ts
+
+import { NgxGlobalEventsService } from 'ngx-global-events';
+
 constructor(
     private _globalEventsService: NgxGlobalEventsService
 ) { }
@@ -36,7 +36,7 @@ anyFunctionToEmit() {
   this._globalEventsService.getEvent("anyEventWithAName").emit();
     
   // with data
-  const dataToEmit = "Hellow world!";
+  const dataToEmit = "Hello world!";
   this._globalEventsService.getEvent("anyEventWithAName").emit(dataToEmit);
 }
 

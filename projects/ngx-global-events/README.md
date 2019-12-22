@@ -18,7 +18,6 @@ $ npm i ngx-global-events --save
 
 ```javascript
 // component.ts
-
 import { NgxGlobalEventsService } from 'ngx-global-events';
 
 constructor(
@@ -31,14 +30,16 @@ constructor(
 
 ```javascript
 
-anyFunctionToEmit() {
-  // without data
-  this.globalEventsService.getEvent("anyEventWithAName").emit();
-    
-  // with data
-  const dataToEmit = "Hello world!";
-  this.globalEventsService.getEvent("anyEventWithAName").emit(dataToEmit);
-}
+// without data
+this.globalEventsService.get("anyEventWithAName").emit();
+// or 
+this.globalEventsService.emit("anyEventWithAName");
+
+// with data
+const dataToEmit = "Hello world!";
+this.globalEventsService.get("anyEventWithAName").emit(dataToEmit);
+// or
+this.globalEventsService.emit("anyEventWithAName", dataToEmit);
 
 ````
 
@@ -46,18 +47,31 @@ anyFunctionToEmit() {
 
 ```javascript
 
-anyFunctionToListen() {
-  // without data
-  this.globalEventsService.getEvent("anyEventWithAName").subscribe(() => {
+// without data
+this.globalEventsService.get("anyEventWithAName").subscribe(() => {
+  // code to do when listen something
+});
+  
+// with data
+this.globalEventsService.get("anyEventWithAName").subscribe((data) => {
+    console.log(data); // "Hello world!";
+      
     // code to do when listen something
-  });
-    
-  // with data
-  this.globalEventsService.getEvent("anyEventWithAName").subscribe((data) => {
-      console.log(data); // "Hello world!";
-        
-      // code to do when listen something
-  });
-}
+});
+
+````
+
+##### On any event:
+
+```javascript
+this.globalEventsService.onEvent.subscribe((data) => {
+  // code to do when listen something
+})
+
+// data model
+// {
+  // eventName: 'name of event - is a string',
+  // data: ['data emitted - is anything']
+// }
 
 ````

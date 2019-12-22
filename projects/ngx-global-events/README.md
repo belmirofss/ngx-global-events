@@ -22,7 +22,7 @@ $ npm i ngx-global-events --save
 import { NgxGlobalEventsService } from 'ngx-global-events';
 
 constructor(
-    private _globalEventsService: NgxGlobalEventsService
+    private globalEventsService: NgxGlobalEventsService
 ) { }
 
 ````
@@ -33,11 +33,11 @@ constructor(
 
 anyFunctionToEmit() {
   // without data
-  this._globalEventsService.getEvent("anyEventWithAName").emit();
+  this.globalEventsService.getEvent("anyEventWithAName").emit();
     
   // with data
   const dataToEmit = "Hello world!";
-  this._globalEventsService.getEvent("anyEventWithAName").emit(dataToEmit);
+  this.globalEventsService.getEvent("anyEventWithAName").emit(dataToEmit);
 }
 
 ````
@@ -48,12 +48,12 @@ anyFunctionToEmit() {
 
 anyFunctionToListen() {
   // without data
-  this._globalEventsService.getEvent("anyEventWithAName").subscribe(() => {
+  this.globalEventsService.getEvent("anyEventWithAName").subscribe(() => {
     // code to do when listen something
   });
     
   // with data
-  this._globalEventsService.getEvent("anyEventWithAName").subscribe((data) => {
+  this.globalEventsService.getEvent("anyEventWithAName").subscribe((data) => {
       console.log(data); // "Hello world!";
         
       // code to do when listen something

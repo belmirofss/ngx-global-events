@@ -1,4 +1,4 @@
-# NgxGlobalEvents
+# ngx-global-events | Angular6+
 
 
 A really simple way to emit and listen global events in Angular 6+.

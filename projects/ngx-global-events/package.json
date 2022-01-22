@@ -1,9 +1,12 @@
 {
   "name": "ngx-global-events",
-  "version": "3.0.1",
+  "version": "3.1.0",
   "peerDependencies": {
-    "@angular/common": "^6.0.0-rc.0 || ^6.0.0",
-    "@angular/core": "^6.0.0-rc.0 || ^6.0.0"
+    "@angular/common": "^6.0.0",
+    "@angular/core": "^^6.0.0"
+  },
+  "dependencies": {
+    "tslib": "^2.3.0"
   },
   "keywords": [
     "angular",
@@ -12,6 +15,7 @@
     "ngx-global-events",
     "service",
     "ng2",
+    "ngx",
     "angular2",
     "angular4",
     "angular6",

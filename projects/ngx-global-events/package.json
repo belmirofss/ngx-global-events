@@ -9,7 +9,15 @@
     "angular",
     "events",
     "global-events",
-    "ngx-global-events"
+    "ngx-global-events",
+    "service",
+    "ng2",
+    "angular2",
+    "angular4",
+    "angular6",
+    "angular8",
+    "angular10",
+    "angular12"
   ],
   "author": "Belmiro Flávio <belmirofss@gmail.com>",
   "license": "MIT"

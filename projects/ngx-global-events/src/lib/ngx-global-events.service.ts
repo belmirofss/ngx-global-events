@@ -1,4 +1,5 @@
 import { Injectable, EventEmitter } from '@angular/core';
+import { NgxGlobalEvent } from './NgxGlobalEvent';
 
 @Injectable({
   providedIn: 'root',
@@ -9,20 +10,18 @@ export class NgxGlobalEventsService {
 
   private _emitters: { [ eventName: string ]: EventEmitter<any> } = {};
 
-  public onEvent: EventEmitter<{ eventName: string, data: any }> = new EventEmitter<{ eventName: string, data: any }>();
+  public onEvent: EventEmitter<NgxGlobalEvent> = new EventEmitter<NgxGlobalEvent>();
 
-  get(eventName: string): EventEmitter<any> {
+  get(eventName: string): EventEmitter<NgxGlobalEvent> {
     if (!this._emitters[eventName]){
       this._emitters[eventName] = new EventEmitter<any>();
 
       this._emitters[eventName].subscribe(
-        data => {
-          this.onEvent.emit({
-            eventName,
-            data
-          })
-        }
-      )
+        data => this.onEvent.emit({
+          eventName,
+          data
+        })
+      );
     }
         
     return this._emitters[eventName];
@@ -34,7 +33,7 @@ export class NgxGlobalEventsService {
       this.onEvent.next({
         eventName,
         data
-      })
+      });
     }
   }
 }

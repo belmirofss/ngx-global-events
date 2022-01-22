@@ -55,7 +55,6 @@ this.globalEventsService.get("anyEventWithAName").subscribe(() => {
 // with data
 this.globalEventsService.get("anyEventWithAName").subscribe((data) => {
     console.log(data); // "Hello world!";
-      
     // code to do when listen something
 });
 
@@ -64,11 +63,11 @@ this.globalEventsService.get("anyEventWithAName").subscribe((data) => {
 ##### On any event:
 
 ```javascript
-this.globalEventsService.onEvent.subscribe((data) => {
+this.globalEventsService.onEvent.subscribe((data: NgxGlobalEvent) => {
   // code to do when listen something
 })
 
-// data model
+// NgxGlobalEvent
 // {
   // eventName: 'name of event - is a string',
   // data: ['data emitted - is anything']
